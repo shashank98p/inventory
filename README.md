@@ -13,8 +13,8 @@ The project demonstrates:
 # API Endpoints:
 
 1.Get All Items - Retrieve a list of all inventory items
-Request - GET /items
-Response -
+- Request - GET /items
+- Response -
 [
     {
     "id": 1,
@@ -31,11 +31,11 @@ Response -
 ]
 
 2.GET Item by ID - Retrieve a single item by its ID
-Request: GET /items/{id}
+- Request: GET /items/{id}
 
 Example:
 GET /items/1
-Response:
+- Response:
 {
 "id": 1,
 "name": "Pepsi",
@@ -44,15 +44,15 @@ Response:
 }
 
 3.POST  - Create a New Item
-Request: POST /items
+- Request: POST /items
 
-Request Body:
+- Request Body:
 {
 "name": "Mouse",
 "quantity": 15,
 "price": 25.00
 }
-Response:
+- Response:
 {
 "id": 3,
 "name": "Mouse",
@@ -61,11 +61,11 @@ Response:
 }
 
 4.DELETE Item by ID - Delete an item using its ID if it exists
-Request: DELETE /items/{id}
+- Request: DELETE /items/{id}
 
 Example:
 DELETE /items/3
-Response:204 No Content
+- Response:204 No Content
 
 
 
