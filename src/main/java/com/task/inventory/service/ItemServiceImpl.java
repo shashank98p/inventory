@@ -38,4 +38,13 @@ public class ItemServiceImpl implements ItemService {
         Item item = itemRepository.findById(id).orElseThrow(()-> new ItemNotFoundException("Item not found"));
         itemRepository.delete(item);
     }
+
+    @Override
+    public Item updateItem(Long id, Item updatedItem) {
+        Item item = getItemById(id);
+        item.setName(updatedItem.getName());
+        item.setPrice(updatedItem.getPrice());
+        item.setQuantity(updatedItem.getQuantity());
+        return itemRepository.save(item);
+    }
 }

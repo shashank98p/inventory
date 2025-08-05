@@ -36,7 +36,11 @@ public class ItemController {
         Item items = itemService.getItemById(id);
         return ResponseEntity.ok(items);
     }
+    @PutMapping("/{id}")
+    public ResponseEntity<Item> updateItem(@PathVariable Long id,@RequestBody Item updatedItem){
+        return ResponseEntity.ok(itemService.updateItem(id,updatedItem));
 
+    }
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteItem(@PathVariable Long id){
         itemService.deleteItem(id);
